@@ -4,13 +4,17 @@ A reinforcement learning (PPO) agent trained to trade EUR/USD, evaluated with ba
 
 ## Project Summary
 
-This project trains a Proximal Policy Optimization (PPO) agent to make trading decisions (hold / go long / go short, with configurable stop-loss and take-profit levels) on historical EUR/USD price data, using a custom OpenAI Gymnasium environment. Rather than stopping at a single training run, the project systematically tests whether the agent's performance is real, reproducible, and better than doing nothing.
+This project applies reinforcement learning to sequential decision-making on noisy financial time series: a Proximal Policy Optimization (PPO) agent learns to make trading decisions (hold / go long / go short, with configurable stop-loss and take-profit levels) on historical EUR/USD price data, using a custom OpenAI Gymnasium environment. Rather than stopping at a single training run, the project systematically studies how feature choices, reward design, and training duration affect out-of-sample behavior, testing whether the agent's performance is real, reproducible, and better than doing nothing.
+
+## Data Source
+
+The hourly EUR/USD OHLCV data (`data/EURUSD_Candlestick_1_Hour_BID_*.csv`) is sourced from [Dukascopy's Historical Data Feed](https://www.dukascopy.com/swiss/english/marketwatch/historical/).
 
 **Headline finding:** across 5 feature/reward configurations and 3 random seeds each, no configuration reliably outperformed a naive buy-and-hold baseline. Two configurations showed a statistically consistent edge over a random-action agent (evidence the policy learns *something* non-trivial), but this was not enough to overcome transaction costs and market drift. Adding technical indicators (MACD, Bollinger Bands) increased result variance without improving mean performance.
 
 ## Why This Result Matters
 
-This project focuses on the methodology needed to actually find out whether a strategy works: baseline comparison, seed-variance testing, and walk-forward validation. That process is the core deliverable here, independent of whether the strategy itself turned out to be profitable.
+What this project is actually evaluating, is the methodology needed to find out whether a strategy works: baseline comparison against buy-and-hold and a random agent, seed-variance testing to separate signal from noise, and walk-forward validation to check results hold across different time periods. That process is the core deliverable here, independent of whether the strategy itself turned out to be profitable.
 
 ## Environment
 
