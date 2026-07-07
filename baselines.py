@@ -1,5 +1,3 @@
-# baselines.py
-
 import numpy as np
 
 from configs import BASE_CONFIG

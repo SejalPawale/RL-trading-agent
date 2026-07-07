@@ -1,5 +1,3 @@
-# test_agent.py
-
 from stable_baselines3 import PPO
 
 from configs import BASE_CONFIG

@@ -1,5 +1,3 @@
-# walk_forward.py
-
 import os
 import csv
 import numpy as np

@@ -1,5 +1,3 @@
-# metrics.py
-
 import numpy as np
 
 def compute_step_returns(equity_curve):

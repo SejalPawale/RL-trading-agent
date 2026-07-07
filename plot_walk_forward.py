@@ -1,5 +1,3 @@
-# plot_walk_forward.py
-
 import csv
 from collections import defaultdict
 import numpy as np

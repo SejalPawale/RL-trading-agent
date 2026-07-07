@@ -1,5 +1,3 @@
-# plot_seed_comparison.py
-
 import csv
 import numpy as np
 import matplotlib.pyplot as plt

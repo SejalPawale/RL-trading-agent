@@ -1,5 +1,3 @@
-# plot_results.py
-
 import os
 import glob
 import numpy as np

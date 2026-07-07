@@ -1,5 +1,3 @@
-# configs.py
-
 BASE_CONFIG = {
     "train_csv": "data/eurusd_train.csv",
     "test_csv": "data/eurusd_test.csv",
